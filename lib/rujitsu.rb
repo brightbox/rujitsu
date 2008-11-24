@@ -30,13 +30,11 @@ class Fixnum
   NUMBERS = ('0'..'9').to_a
   CHARACTERS = LETTERS + NUMBERS
 
-  def generate_random_string_using legal_characters
-    result = ""
+  def generate_random_string_using(legal_characters)
     upper_limit = legal_characters.size - 1
-    self.times do | num | 
-      result << legal_characters[rand(upper_limit)]
-    end
-    return result
+    (1..self).collect do |num|
+      legal_characters[rand(upper_limit)]
+    end.join
   end
 end
 
