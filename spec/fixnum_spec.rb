@@ -1,18 +1,5 @@
 require File.join(File.dirname(__FILE__) + "/spec_helper")
 
-describe Numeric, "to_cents" do
-  it "should be a method" do
-    Numeric.instance_methods.should include("to_cents")
-    Numeric.new.should respond_to(:to_cents)
-  end
-
-  it "should convert float values to \"cents\"" do
-    [ 5, 10, 15, 25, 29 ].each do |i|
-      i.to_cents.should == (i*100).to_i
-    end
-  end
-end
-
 describe Fixnum do
 
   describe "random_letters" do
@@ -61,26 +48,6 @@ describe Fixnum do
         str.should match( /^[a-z0-9]+$/ )
       end
     end
-  end
-
-end
-
-describe String, "to_url" do
-
-  it "should remove non-valid characters" do
-    "a!@£$".to_url.should == "a"
-  end
-
-  it "should convert spaces to hyphens" do
-    "a string".to_url.should == "a-string"
-  end
-
-  it "should downcase entire string" do
-    "THISISASTRING".to_url.should == "thisisastring"
-  end
-
-  it "should not touch [\\-0-9a-z]" do
-    "post-number-12345".to_url.should == "post-number-12345"
   end
 
 end
