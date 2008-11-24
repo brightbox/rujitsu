@@ -8,7 +8,7 @@ Echoe.new('rujitsu', '0.1.0') do | config |
   config.author = 'Rahoul Baruah'
   config.email = 'hello@3hv.co.uk'
   config.ignore_pattern = ['tmp/*', 'script/*']
-  config.development_dependencies = ['rspec >= 1.1.11']
+  config.development_dependencies = []
 end
 
 Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each do | rake_file | 
