@@ -16,6 +16,12 @@ The Fixnum class has a couple of extensions allowing you to generate random stri
   5.random_numbers
   5.random_characters
   
+You can also generate a variable length string.  
+
+  (3..5).random_letters 
+  
+This generates a string of random letters whose length is 3, 4 or 5 characters.  
+  
 === URL-friendly strings
 
 The String class has an extension that strips out URL-unfriendly characters.  
