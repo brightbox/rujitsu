@@ -1,3 +1,6 @@
+Cleaned up invalid characters
+Refactored generate_random_string_using method
+
 = Version 0.1.1 (2008-11-22)
 
 Added range based random character generation
