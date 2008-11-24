@@ -1,0 +1,23 @@
+= rujitsu
+
+A Rails gem with various helper methods to smooth out your Ruby development.  
+
+== Install
+
+  gem install rahoulb-rujitsu --source http://gems.githib.com
+  
+== Usage
+
+=== Generating random strings
+
+The Fixnum class has a couple of extensions allowing you to generate random strings.  
+
+  5.random_letters
+  5.random_numbers
+  5.random_characters
+  
+=== URL-friendly strings
+
+The String class has an extension that strips out URL-unfriendly characters.  
+
+  ""$%hello!@ 123 there'".url_friendly # => "hello-123-there" 
