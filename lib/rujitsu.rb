@@ -40,11 +40,30 @@ class Fixnum
   end
 end
 
+
+class Range
+	def to_random_i
+		self.to_a.sort_by { rand }.first
+	end
+	
+	def random_letters
+		self.to_random_i.random_letters
+	end
+	
+	def random_numbers
+		self.to_random_i.random_numbers
+	end
+	
+	def random_characters
+		self.to_random_i.random_characters
+	end
+	
+end
+
+
 class String
 	# Return a string that can be used as part of a url
 	def to_url
 		self.downcase.gsub(/[^\-0-9a-z ]/, '').split.join('-')
 	end
 end
-
-
