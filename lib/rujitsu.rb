@@ -8,7 +8,7 @@ class Numeric
 end
 
 class Fixnum
-  #Êproduce a string of N random letters
+  # produce a string of N random letters
   #   5.random_letters
   def random_letters
     generate_random_string_using LETTERS
