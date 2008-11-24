@@ -1,5 +1,4 @@
-lib/numbers.rb
-lib/string.rb
+lib/rujitsu.rb
+Manifest
 Rakefile
 README.rdoc
-Manifest
