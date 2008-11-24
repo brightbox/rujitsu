@@ -8,7 +8,7 @@ class Numeric
 end
 
 class Fixnum
-  #Êproduce a string of N random letters
+  # produce a string of N random letters
   #   5.random_letters
   def random_letters
     generate_random_string_using LETTERS
@@ -40,25 +40,25 @@ end
 
 
 class Range
-  #Êpull a random element out of this range
+  # pull a random element out of this range
 	def to_random_i
 		self.to_a.sort_by { rand }.first
 	end
 	
 	# create a string of random letters whose length is one of the values in your range
-	#Ê  (3..4).random_letters #Ê=> returns a string or 3 or 4 random letters
+	# (3..4).random_letters #Ê=> returns a string or 3 or 4 random letters
 	def random_letters
 		self.to_random_i.random_letters
 	end
 	
 	# create a string of random numbers whose length is one of the values in your range
-	#Ê  (3..4).random_numbers #Ê=> returns a string or 3 or 4 random numbers
+	# (3..4).random_numbers #Ê=> returns a string or 3 or 4 random numbers
 	def random_numbers
 		self.to_random_i.random_numbers
 	end
 	
 	# create a string of random characters whose length is one of the values in your range
-	#Ê  (3..4).random_characters #Ê=> returns a string or 3 or 4 random characters
+	# (3..4).random_characters #Ê=> returns a string or 3 or 4 random characters
 	def random_characters
 		self.to_random_i.random_characters
 	end
