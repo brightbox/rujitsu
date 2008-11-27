@@ -6,6 +6,19 @@ A Rails gem with various helper methods to smooth out your Ruby development.
 
   gem install rahoulb-rujitsu --source http://gems.github.com
   
+== Including
+
+  require "rujitsu"
+  require "rujitsu/grammar"
+
+=== Rails
+
+To require in rails 2.2, add the following to your +environment.rb+ file.
+
+  config.gem "rahoulb-rujitsu", :lib => "rujitsu", :source => "http://gems.github.com"
+  config.gem "rahoulb-rujitsu", :lib => "rujitsu/grammar", :source => "http://gems.github.com"
+
+
 == Usage
 
 === Generating random strings
@@ -28,11 +41,11 @@ The String class has an extension that strips out URL-unfriendly characters.
 
   ""$%hello!@ 123 there'".to_url # => "hello-123-there" 
 
-== Rails
 
-To require in rails 2.2, add the following to your +environment.rb+ file.
+=== Grammar
 
-  config.gem "rahoulb-rujitsu", :lib => "rujitsu", :source => "http://gems.github.com"
+So far the grammar library just adds the method +should_recieve+ for rspec assertions. Use it to find out what it does!
+
 
 == Released under the MIT Licence
 
