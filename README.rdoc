@@ -1,6 +1,6 @@
 = rujitsu
 
-A Rails gem with various helper methods to smooth out your Ruby development.  
+A ruby gem with various helper methods to smooth out your Ruby development.  
 
 == Install
 
