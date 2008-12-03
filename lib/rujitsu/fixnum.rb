@@ -1,4 +1,12 @@
 class Fixnum
+  # produce a string of N random vowels
+  def random_vowels
+    generate_random_string_using VOWELS
+  end
+  # produce a string of N random consonants
+  def random_consonants
+    generate_random_string_using CONSONANTS
+  end
   # produce a string of N random letters
   #   5.random_letters
   def random_letters
@@ -16,8 +24,10 @@ class Fixnum
   end
   
   private
-  
+
+  VOWELS = ['a', 'e', 'i', 'o', 'u']  
   LETTERS = ('a'..'z').to_a
+  CONSONANTS = LETTERS - VOWELS
   NUMBERS = ('0'..'9').to_a
   CHARACTERS = LETTERS + NUMBERS
 

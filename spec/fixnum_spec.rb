@@ -2,6 +2,38 @@ require File.join(File.dirname(__FILE__) + "/spec_helper")
 
 describe Fixnum do
 
+  describe "random_vowels" do
+    it "should be a method" do
+      Fixnum.instance_methods.should include("random_vowels")
+      5.should respond_to(:random_vowels)
+    end
+    
+    it "should produce a string of random vowels" do
+      [ 5, 10, 15, 25, 29 ].each do |i|
+        str = i.random_vowels
+        str.should be_a_kind_of( String )
+        str.length.should == i
+        str.should match( /^[aeiou]+$/ )
+      end
+    end
+  end
+
+  describe "random_consonants" do
+    it "should be a method" do
+      Fixnum.instance_methods.should include("random_consonants")
+      5.should respond_to(:random_consonants)
+    end
+    
+    it "should produce a string of random consonants" do
+      [ 5, 10, 15, 25, 29 ].each do |i|
+        str = i.random_consonants
+        str.should be_a_kind_of( String )
+        str.length.should == i
+        str.should match( /^[bcdfghjklmnpqrstvwxyz]+$/ )
+      end
+    end
+  end
+
   describe "random_letters" do
     it "should be a method" do
       Fixnum.instance_methods.should include("random_letters")
