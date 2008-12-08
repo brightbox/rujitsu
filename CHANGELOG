@@ -1,6 +1,10 @@
+= Version 0.1.7 (2008-12-08)
+
+Added the limiter to Range#random_numbers
+
 = Version 0.1.6 (2008-12-08)
 
-Added a limiter to random_numbers
+Added a limiter to Fixnum#random_numbers
 
 = Version 0.1.5 (2008-12-03)
 
