@@ -1,3 +1,11 @@
+= Version 0.1.6 (2008-12-08)
+
+Added a limiter to random_numbers
+
+= Version 0.1.5 (2008-12-03)
+
+Added random_vowels and random_consonants
+
 = Version 0.1.4 (2008-11-27)
 
 Added the grammar section

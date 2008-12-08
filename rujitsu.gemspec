@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rujitsu}
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brightbox Systems Ltd"]
-  s.date = %q{2008-12-03}
+  s.date = %q{2008-12-08}
   s.description = %q{Various helper methods to smooth over Ruby development}
   s.email = %q{hello@brightbox.co.uk}
   s.extra_rdoc_files = ["CHANGELOG", "lib/rujitsu/fixnum.rb", "lib/rujitsu/grammar.rb", "lib/rujitsu/numeric.rb", "lib/rujitsu/range.rb", "lib/rujitsu/string.rb", "lib/rujitsu.rb", "README.rdoc", "tasks/rspec.rake"]
