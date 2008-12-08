@@ -12,8 +12,8 @@ class Range
 	
 	# create a string of random numbers whose length is one of the values in your range
 	# (3..4).random_numbers # => returns a string or 3 or 4 random numbers
-	def random_numbers
-		self.to_random_i.random_numbers
+	def random_numbers opts = {}
+		self.to_random_i.random_numbers opts
 	end
 	
 	# create a string of random characters whose length is one of the values in your range
