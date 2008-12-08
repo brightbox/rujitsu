@@ -14,8 +14,20 @@ class Fixnum
   end
   # produce a string of N random numbers
   #   5.random_numbers
-  def random_numbers
-    generate_random_string_using NUMBERS
+  # optionally specific limits on the numbers
+  #   5.random_numbers(:from => 1, :to => 5)
+  def random_numbers( opts = {} )
+    # Then set some defaults, just in case
+    upper = opts[:to] || 9
+    lower = opts[:from] || 0
+            
+    # And finally calculate the number
+    n = []    
+    self.times do
+      i = (lower..upper).to_a.sort_by { rand }.first
+      n << i.to_s
+    end
+    n.join("")
   end
   # produce a string of N random characters
   #   5.random_characters

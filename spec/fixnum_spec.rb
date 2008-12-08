@@ -64,6 +64,50 @@ describe Fixnum do
         num.should match( /^[0-9]+$/ )
       end
     end
+    
+    it "should contain only the number 5 upwards" do
+      num = 5.random_numbers(:from => 5)
+      
+      num.should be_a_kind_of(String)
+      
+      # Check each digit is greater than or equal to 5
+      string_to_integers(num).each do |i|
+        i.should be_a_kind_of(Integer)
+        i.should >= 5
+      end
+    end
+    
+    it "should contain on the number 5 downwards" do
+      num = 5.random_numbers(:to => 5)
+      
+      num.should be_a_kind_of(String)
+      
+      # Check each digit is lower than or equal to 5
+      string_to_integers(num).each do |i|
+        i.should be_a_kind_of(Integer)
+        i.should <= 5
+      end
+    end
+    
+    it "should contain numbers between 4 and 6" do
+      num = 5.random_numbers(:from => 4, :to => 6)
+      
+      num.should be_a_kind_of(String)
+      
+      # Check each digit is lower than or equal to 4..
+      # ..and greater than or equal to 6
+      string_to_integers(num).each do |i|
+        i.should be_a_kind_of(Integer)
+        i.should >= 4
+        i.should <= 6
+      end
+    end
+    
+    private
+    
+    def string_to_integers(str)
+      str.split("").map {|x| x.to_i }
+    end
   end
 
   describe "random_characters" do
