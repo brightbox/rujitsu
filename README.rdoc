@@ -41,6 +41,11 @@ The String class has an extension that strips out URL-unfriendly characters.
 
   ""$%hello!@ 123 there'".to_url # => "hello-123-there" 
 
+=== Truncating strings
+
+The String class has an extension that truncates it to a customisable length with a customisable suffix.
+
+  "this is a string".truncate(:length => 15) # => "this is a st..."
 
 === Grammar
 
