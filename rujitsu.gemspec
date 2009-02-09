@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["CHANGELOG", "lib/rujitsu/fixnum.rb", "lib/rujitsu/grammar.rb", "lib/rujitsu/numeric.rb", "lib/rujitsu/range.rb", "lib/rujitsu/string.rb", "lib/rujitsu.rb", "README.rdoc", "tasks/rspec.rake"]
   s.files = ["CHANGELOG", "lib/rujitsu/fixnum.rb", "lib/rujitsu/grammar.rb", "lib/rujitsu/numeric.rb", "lib/rujitsu/range.rb", "lib/rujitsu/string.rb", "lib/rujitsu.rb", "Manifest", "Rakefile", "README.rdoc", "rujitsu.gemspec", "spec/fixnum_spec.rb", "spec/numeric_spec.rb", "spec/range_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "spec/string_spec.rb", "tasks/rspec.rake"]
   s.has_rdoc = true
-  s.homepage = %q{http://github.com/rahoub/rujitsu}
+  s.homepage = %q{http://github.com/brightbox/rujitsu}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rujitsu", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{rujitsu}

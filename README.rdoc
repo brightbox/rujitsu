@@ -4,7 +4,7 @@ A ruby gem with various helper methods to smooth out your Ruby development.
 
 == Install
 
-  gem install rahoulb-rujitsu --source http://gems.github.com
+  gem install brightbox-rujitsu --source http://gems.github.com
   
 == Including
 
@@ -15,8 +15,8 @@ A ruby gem with various helper methods to smooth out your Ruby development.
 
 To require in rails 2.2, add the following to your +environment.rb+ file.
 
-  config.gem "rahoulb-rujitsu", :lib => "rujitsu", :source => "http://gems.github.com"
-  config.gem "rahoulb-rujitsu", :lib => "rujitsu/grammar", :source => "http://gems.github.com"
+  config.gem "brightbox-rujitsu", :lib => "rujitsu", :source => "http://gems.github.com"
+  config.gem "brightbox-rujitsu", :lib => "rujitsu/grammar", :source => "http://gems.github.com"
 
 
 == Usage
