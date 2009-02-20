@@ -13,11 +13,14 @@ A ruby gem with various helper methods to smooth out your Ruby development.
 
 === Rails
 
-To require in rails 2.2, add the following to your +environment.rb+ file.
+To require in rails 2.2, add the following to your <tt>environment.rb</tt> file.
 
   config.gem "brightbox-rujitsu", :lib => "rujitsu", :source => "http://gems.github.com"
   config.gem "brightbox-rujitsu", :lib => "rujitsu/grammar", :source => "http://gems.github.com"
 
+== Documentation
+
+Run <tt>rake docs</tt> and open doc/index.html.
 
 == Usage
 
@@ -31,7 +34,7 @@ The Fixnum class has a couple of extensions allowing you to generate random stri
   
 You can also generate a variable length string.  
 
-  (3..5).random_letters 
+  (3..5).random_letters
   
 This generates a string of random letters whose length is 3, 4 or 5 characters.  
   
@@ -49,7 +52,7 @@ The String class has an extension that truncates it to a customisable length wit
 
 === Grammar
 
-So far the grammar library just adds the method +should_recieve+ for rspec assertions. Use it to find out what it does!
+So far the grammar library just adds the method <tt>should_recieve</tt> for rspec assertions. Use it to find out what it does!
 
 
 == Released under the MIT Licence
