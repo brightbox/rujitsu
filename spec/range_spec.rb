@@ -88,6 +88,24 @@ describe Range do
       end
     end
     
+    it "should create an even number" do
+      setup_range
+      
+      str = @range.random_numbers :only => :even
+      
+      str.should be_a_kind_of(String)
+      (str.to_i % 2).should == 0
+    end
+    
+    it "should create an odd number" do
+      setup_range
+      
+      str = @range.random_numbers :only => :odd
+      
+      str.should be_a_kind_of(String)
+      (str.to_i % 2).should_not == 0
+    end
+    
     private
     
     def string_to_integers(str)

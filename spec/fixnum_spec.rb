@@ -103,6 +103,20 @@ describe Fixnum do
       end
     end
     
+    it "should create an even number" do
+      num = 5.random_numbers(:only => :even)
+      
+      num.should be_a_kind_of(String)
+      (num.to_i % 2).should == 0
+    end
+    
+    it "should create an odd number" do
+      num = 5.random_numbers(:only => :odd)
+      
+      num.should be_a_kind_of(String)
+      (num.to_i % 2).should_not == 0
+    end
+    
     private
     
     def string_to_integers(str)
