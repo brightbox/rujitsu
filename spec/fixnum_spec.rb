@@ -16,6 +16,22 @@ describe Fixnum do
         str.should match( /^[aeiou]+$/ )
       end
     end
+    
+    it "should exclude a character" do
+      # Given there are 5 vowels, 5^3 should 
+      # contain at least one instance of every vowel
+      str = (5**3).random_vowels(:except => "a")
+      str.should be_a_kind_of( String )
+      str.length.should == 5**3
+      str.should_not match(/a/)
+    end
+    
+    it "should exclude characters" do
+      str = (5**3).random_vowels(:except => %w(i o u))
+      str.should be_a_kind_of( String )
+      str.length.should == 5**3
+      str.should_not match(/iou/)
+    end
   end
 
   describe "random_consonants" do
@@ -27,10 +43,31 @@ describe Fixnum do
     it "should produce a string of random consonants" do
       [ 5, 10, 15, 25, 29 ].each do |i|
         str = i.random_consonants
+        
         str.should be_a_kind_of( String )
         str.length.should == i
         str.should match( /^[bcdfghjklmnpqrstvwxyz]+$/ )
       end
+    end
+    
+    it "should exclude a character" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_consonants(:except => "c")
+      
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/c/)
+    end
+    
+    it "should exclude characters" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_consonants(:except => %w(c d f))
+      
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/cdf/)
     end
   end
 
@@ -47,6 +84,26 @@ describe Fixnum do
         str.length.should == i
         str.should match( /^[a-z]+$/ )
       end
+    end
+    
+    it "should exclude a character" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_letters(:except => "d")
+      
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/d/)
+    end
+    
+    it "should exclude characters" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_letters(:except => %w(c d f))
+      
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/cdf/)
     end
   end
 
@@ -137,6 +194,28 @@ describe Fixnum do
         str.length.should == i
         str.should match( /^[a-z0-9]+$/ )
       end
+    end
+    
+    
+    it "should exclude a character" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_characters(:except => "c")
+      
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/c/)
+    end
+    
+    
+    it "should exclude characters" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_characters(:except => %w(c d f))
+      
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/cdf/)
     end
   end
 
