@@ -11,6 +11,9 @@ Echoe.new('rujitsu', '0.1.9') do | config |
   config.development_dependencies = []
 end
 
+desc "Generates manifest & gemspec in one go"
+task :build => [:manifest, :build_gemspec]
+
 Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each do | rake_file | 
   load rake_file
 end
