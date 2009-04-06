@@ -1,3 +1,7 @@
+= Version 0.2 (2009-04-06)
+
+Adding :exclude to Fixnum#random_*
+
 = Version 0.1.9 (2009-02-20)
 
 Added specifying only even or odd random numbers
