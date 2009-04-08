@@ -1,3 +1,8 @@
+= Version 0.2.5 (2009-04-08)
+
+Adding a few debugging methods in rujitsu/inspect
+Added rujitsu/all to require everything in rujitsu
+
 = Version 0.2 (2009-04-06)
 
 Adding :exclude to Fixnum#random_*
