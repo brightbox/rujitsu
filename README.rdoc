@@ -49,6 +49,16 @@ The String class has an extension that strips out URL-unfriendly characters.
 The String class has an extension that truncates it to a customisable length with a customisable suffix.
 
   "this is a string".truncate(:length => 15) # => "this is a st..."
+  
+=== Testing for inclusion within a container
+
+As Rubyists we are all familiar with using include? to test if our variable is one of a number of values.  
+
+  if ['hello', 'world'].include?(@my_value) ... 
+  
+However, it doesn't read correctly.  Rujitsu allows you to write the following as it reads much more like English.  
+
+  if @my_value.in? ['hello', 'world'] ... 
 
 === Grammar
 
