@@ -3,15 +3,21 @@ class Fixnum
   def random_vowels opts={}
     generate_random_string_using VOWELS, opts
   end
+  alias_method :random_vowel, :random_vowels
+
   # produce a string of N random consonants
   def random_consonants opts={}
     generate_random_string_using CONSONANTS, opts
   end
+  alias_method :random_consonant, :random_consonants
+
   # produce a string of N random letters
   #   5.random_letters
   def random_letters opts={}
     generate_random_string_using LETTERS, opts
   end
+  alias_method :random_letter, :random_letters
+
   # produce a string of N random numbers
   #   5.random_numbers
   # optionally specific limits on the numbers
@@ -32,12 +38,15 @@ class Fixnum
     n << end_number_choices(only).select {|x| (lower <= x) && (x <= upper) }.sort_by { rand }.first.to_s
     n.join("")
   end
+  alias_method :random_number, :random_numbers
+
   # produce a string of N random characters
   #   5.random_characters
   def random_characters opts={}
     generate_random_string_using CHARACTERS, opts
   end
-  
+  alias_method :random_character, :random_characters
+
   private
 
   VOWELS = %w(a e i o u)

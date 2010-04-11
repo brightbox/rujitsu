@@ -7,7 +7,12 @@ describe Fixnum do
       Fixnum.instance_methods.should include("random_vowels")
       5.should respond_to(:random_vowels)
     end
-    
+
+    it "should be alias'd as random_vowel" do
+      Fixnum.instance_methods.should include("random_vowel")
+      5.should respond_to(:random_vowel)
+    end
+
     it "should produce a string of random vowels" do
       [ 5, 10, 15, 25, 29 ].each do |i|
         str = i.random_vowels
@@ -39,7 +44,12 @@ describe Fixnum do
       Fixnum.instance_methods.should include("random_consonants")
       5.should respond_to(:random_consonants)
     end
-    
+
+    it "should be alias'd as random_consonant" do
+      Fixnum.instance_methods.should include("random_consonant")
+      5.should respond_to(:random_consonant)
+    end
+
     it "should produce a string of random consonants" do
       [ 5, 10, 15, 25, 29 ].each do |i|
         str = i.random_consonants
@@ -77,6 +87,11 @@ describe Fixnum do
       5.should respond_to(:random_letters)
     end
 
+    it "should be alias'd as random_letter" do
+      Fixnum.instance_methods.should include("random_letter")
+      5.should respond_to(:random_letter)
+    end
+
     it "should produce a string of random letters" do
       [ 5, 10, 15, 25, 29 ].each do |i|
         str = i.random_letters
@@ -111,6 +126,11 @@ describe Fixnum do
     it "should be a method" do
       Fixnum.instance_methods.should include("random_numbers")
       5.should respond_to(:random_numbers)
+    end
+
+    it "should be alias'd as random_number" do
+      Fixnum.instance_methods.should include("random_number")
+      5.should respond_to(:random_number)
     end
 
     it "should produce a string of random numbers" do
@@ -185,6 +205,11 @@ describe Fixnum do
     it "should be a method" do
       Fixnum.instance_methods.should include("random_characters")
       5.should respond_to(:random_numbers)
+    end
+
+    it "should be alias'd as random_character" do
+      Fixnum.instance_methods.should include("random_character")
+      5.should respond_to(:random_character)
     end
 
     it "should produce a string of random letters and numbers" do
