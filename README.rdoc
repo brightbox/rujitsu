@@ -11,12 +11,21 @@ A ruby gem with various helper methods to smooth out your Ruby development.
   require "rujitsu"
   require "rujitsu/grammar"
 
+For using in irb, there's a nice shortcut for you to use:
+
+  $ irb -rubygems -rujitsu
+
+(This works because <tt>-r</tt> is the argument to require a file, and both 'ubygems.rb' and 'ujitsu.rb' exist.)
+
 === Rails
 
 To require in rails 2.2, add the following to your <tt>environment.rb</tt> file.
 
-  config.gem "brightbox-rujitsu", :lib => "rujitsu", :source => "http://gems.github.com"
-  config.gem "brightbox-rujitsu", :lib => "rujitsu/grammar", :source => "http://gems.github.com"
+  config.gem "rujitsu"
+
+If you use RSpec you might want to add the following to your <tt>environments/test.rb</tt>:
+
+  config.gem "rujitsu", :lib => "rujitsu/grammar"
 
 == Documentation
 
@@ -37,7 +46,9 @@ You can also generate a variable length string.
   (3..5).random_letters
   
 This generates a string of random letters whose length is 3, 4 or 5 characters.  
-  
+
+<em>(All the above methods exist in the singular too. eg, <tt>1.random_letter</tt>)</em>
+
 === URL-friendly strings
 
 The String class has an extension that strips out URL-unfriendly characters.  
