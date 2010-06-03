@@ -127,7 +127,23 @@ describe Range do
       str.should match( /^[a-z0-9]+$/ )
     end
   end
-  
+
+  describe "#random_hex_characters" do
+    it "should be a method" do
+      Range.instance_methods.should include("random_hex_characters")
+      (0..1).should respond_to("random_hex_characters")
+    end
+
+    it "should generate a string of random hex characters" do
+      setup_range
+
+      str = @range.random_hex_characters
+      str.length.should == 4
+      str.should match(/^[a-f0-9]+$/)
+    end
+  end
+
+
   def setup_range
     @range = (3..5)
     @range.should_receive(:to_random_i).and_return(4)
