@@ -1,4 +1,4 @@
-class Range
+module RujitsuRange
   # pull a random element out of this range
 	def to_random_i
 		self.to_a.sort_by { rand }.first
@@ -30,3 +30,4 @@ class Range
 
 end
 
+Range.send(:include, RujitsuRange)

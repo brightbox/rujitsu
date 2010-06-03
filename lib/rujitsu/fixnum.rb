@@ -1,4 +1,4 @@
-class Fixnum
+module RujitsuFixnum
   # produce a string of N random vowels
   def random_vowels opts={}
     generate_random_string_using VOWELS, opts
@@ -93,3 +93,5 @@ class Fixnum
     end
   end
 end
+
+Fixnum.send(:include, RujitsuFixnum)

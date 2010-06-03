@@ -1,4 +1,4 @@
-class String
+module RujitsuString
 	# Return a string that can be used as part of a url
 	# replaces basic "bad" characters with "-"
 	def to_url
@@ -24,3 +24,5 @@ class String
     end
   end
 end
+
+String.send(:include, RujitsuString)
