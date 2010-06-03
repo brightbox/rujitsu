@@ -244,4 +244,46 @@ describe Fixnum do
     end
   end
 
+
+  describe "random_hex_characters" do
+    it "should be a method" do
+      Fixnum.instance_methods.should include("random_hex_characters")
+      5.should respond_to(:random_hex_character)
+    end
+
+    it "should be alias'd as random_hex_character" do
+      Fixnum.instance_methods.should include("random_hex_character")
+      5.should respond_to(:random_hex_character)
+    end
+
+    it "should produce a string of random hex characters" do
+      [ 5, 10, 15, 25, 29, (26**2) ].each do |i|
+        str = i.random_hex_characters
+        str.should be_a_kind_of( String )
+        str.length.should == i
+        str.should match( /^[a-f0-9]+$/ )
+      end
+    end
+
+    it "should exclude a character" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_hex_characters(:except => "c")
+
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/c/)
+    end
+
+    it "should exclude characters" do
+      # 26^5 should be large enough to get at least one
+      # instance of every character.
+      str = (26**2).random_hex_characters(:except => %w(c d f))
+
+      str.should be_a_kind_of( String )
+      str.length.should == (26**2)
+      str.should_not match(/cdf/)
+    end
+  end
+
 end

@@ -47,6 +47,11 @@ class Fixnum
   end
   alias_method :random_character, :random_characters
 
+  def random_hex_characters opts={}
+    generate_random_string_using HEX_CHARACTERS, opts
+  end
+  alias_method :random_hex_character, :random_hex_characters
+
   private
 
   VOWELS = %w(a e i o u)
@@ -56,6 +61,7 @@ class Fixnum
   CHARACTERS = LETTERS + NUMBERS
   EVENS = %w(0 2 4 6 8).map {|x| x.to_i }
   ODDS = %w(1 3 5 7 9).map {|x| x.to_i }
+  HEX_CHARACTERS = NUMBERS | ('a'..'f').to_a
 
   def generate_random_string_using(legal_characters, opts={})
     # Check if we have anything to exclude from the legal_characters
