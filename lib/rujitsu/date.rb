@@ -17,4 +17,4 @@ module RujitsuDate
 
 end
 
-Date.send(:include, RujitsuDateTime)
+Date.send(:include, RujitsuDate)
