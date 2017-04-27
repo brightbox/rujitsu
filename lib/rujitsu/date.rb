@@ -12,7 +12,7 @@ module RujitsuDate
 
   def start_of_next_month
     today = self.today
-    if today.month <= 12
+    if today.month < 12
       self.new(today.year, today.month + 1)
     else
       self.new(today.year + 1, 1)
