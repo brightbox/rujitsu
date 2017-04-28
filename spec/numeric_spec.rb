@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require File.join(File.dirname(__FILE__) + "/spec_helper")
 
 describe Numeric, "to_cents" do

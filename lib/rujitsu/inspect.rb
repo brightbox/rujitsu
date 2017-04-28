@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Kernel
   # If output is true then echo's,
   # else just returns the name 

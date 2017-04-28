@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require File.join(File.dirname(__FILE__) + "/spec_helper")
 
 describe String, "to_url" do

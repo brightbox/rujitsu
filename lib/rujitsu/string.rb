@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RujitsuString
 	# Return a string that can be used as part of a url
 	# replaces basic "bad" characters with "-"

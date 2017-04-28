@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RujitsuFixnum
   # produce a string of N random vowels
   def random_vowels opts={}

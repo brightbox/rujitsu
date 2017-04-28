@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RujitsuNumeric
   # convert float values to "cents"
   #   my_value = 2.5

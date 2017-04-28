@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RujitsuRange
   # pull a random element out of this range
 	def to_random_i
