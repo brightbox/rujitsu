@@ -7,7 +7,11 @@ module RujitsuDate
 
   def start_of_last_month
     today = self.today
-    self.new(today.year, today.month - 1)
+    if today.month == 1
+       self.new(today.year - 1, today.month - 12)
+    else
+      self.new(today.year, today.month - 1)
+    end
   end
 
   def start_of_next_month
