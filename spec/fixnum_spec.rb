@@ -3,7 +3,6 @@
 require File.join(File.dirname(__FILE__) + "/spec_helper")
 
 describe Fixnum do
-
   describe "random_vowels" do
     it "should be a method" do
       Fixnum.instance_methods.should include("random_vowels")
@@ -23,16 +22,16 @@ describe Fixnum do
         str.should match( /^[aeiou]+$/ )
       end
     end
-    
+
     it "should exclude a character" do
-      # Given there are 5 vowels, 5^3 should 
+      # Given there are 5 vowels, 5^3 should
       # contain at least one instance of every vowel
       str = (5**3).random_vowels(:except => "a")
       str.should be_a_kind_of( String )
       str.length.should == 5**3
       str.should_not match(/a/)
     end
-    
+
     it "should exclude characters" do
       str = (5**3).random_vowels(:except => %w(i o u))
       str.should be_a_kind_of( String )
@@ -55,28 +54,28 @@ describe Fixnum do
     it "should produce a string of random consonants" do
       [ 5, 10, 15, 25, 29 ].each do |i|
         str = i.random_consonants
-        
+
         str.should be_a_kind_of( String )
         str.length.should == i
         str.should match( /^[bcdfghjklmnpqrstvwxyz]+$/ )
       end
     end
-    
+
     it "should exclude a character" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
       str = (26**2).random_consonants(:except => "c")
-      
+
       str.should be_a_kind_of( String )
       str.length.should == (26**2)
       str.should_not match(/c/)
     end
-    
+
     it "should exclude characters" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
       str = (26**2).random_consonants(:except => %w(c d f))
-      
+
       str.should be_a_kind_of( String )
       str.length.should == (26**2)
       str.should_not match(/cdf/)
@@ -102,22 +101,22 @@ describe Fixnum do
         str.should match( /^[a-z]+$/ )
       end
     end
-    
+
     it "should exclude a character" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
       str = (26**2).random_letters(:except => "d")
-      
+
       str.should be_a_kind_of( String )
       str.length.should == (26**2)
       str.should_not match(/d/)
     end
-    
+
     it "should exclude characters" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
       str = (26**2).random_letters(:except => %w(c d f))
-      
+
       str.should be_a_kind_of( String )
       str.length.should == (26**2)
       str.should_not match(/cdf/)
@@ -143,36 +142,36 @@ describe Fixnum do
         num.should match( /^[0-9]+$/ )
       end
     end
-    
+
     it "should contain only the number 5 upwards" do
       num = 5.random_numbers(:from => 5)
-      
+
       num.should be_a_kind_of(String)
-      
+
       # Check each digit is greater than or equal to 5
       string_to_integers(num).each do |i|
         i.should be_a_kind_of(Integer)
         i.should >= 5
       end
     end
-    
+
     it "should contain on the number 5 downwards" do
       num = 5.random_numbers(:to => 5)
-      
+
       num.should be_a_kind_of(String)
-      
+
       # Check each digit is lower than or equal to 5
       string_to_integers(num).each do |i|
         i.should be_a_kind_of(Integer)
         i.should <= 5
       end
     end
-    
+
     it "should contain numbers between 4 and 6" do
       num = 5.random_numbers(:from => 4, :to => 6)
-      
+
       num.should be_a_kind_of(String)
-      
+
       # Check each digit is lower than or equal to 4..
       # ..and greater than or equal to 6
       string_to_integers(num).each do |i|
@@ -181,23 +180,23 @@ describe Fixnum do
         i.should <= 6
       end
     end
-    
+
     it "should create an even number" do
       num = 5.random_numbers(:only => :even)
-      
+
       num.should be_a_kind_of(String)
       (num.to_i % 2).should == 0
     end
-    
+
     it "should create an odd number" do
       num = 5.random_numbers(:only => :odd)
-      
+
       num.should be_a_kind_of(String)
       (num.to_i % 2).should_not == 0
     end
-    
+
     private
-    
+
     def string_to_integers(str)
       str.split("").map {|x| x.to_i }
     end
@@ -222,24 +221,24 @@ describe Fixnum do
         str.should match( /^[a-z0-9]+$/ )
       end
     end
-    
-    
+
+
     it "should exclude a character" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
       str = (26**2).random_characters(:except => "c")
-      
+
       str.should be_a_kind_of( String )
       str.length.should == (26**2)
       str.should_not match(/c/)
     end
-    
-    
+
+
     it "should exclude characters" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
       str = (26**2).random_characters(:except => %w(c d f))
-      
+
       str.should be_a_kind_of( String )
       str.length.should == (26**2)
       str.should_not match(/cdf/)
@@ -287,5 +286,4 @@ describe Fixnum do
       str.should_not match(/cdf/)
     end
   end
-
 end
