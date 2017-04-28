@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary = %q{Various helper methods to smooth over Ruby development}
   spec.description = %q{Various helper methods to smooth over Ruby development}
   spec.homepage = %q{http://github.com/brightbox/rujitsu}
+  spec.license = "MIT"
 
   spec.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/rujitsu.rb", "lib/rujitsu/all.rb", "lib/rujitsu/fixnum.rb", "lib/rujitsu/grammar.rb", "lib/rujitsu/inspect.rb", "lib/rujitsu/numeric.rb", "lib/rujitsu/object.rb", "lib/rujitsu/range.rb", "lib/rujitsu/string.rb", "lib/ujitsu.rb"]
   spec.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rujitsu", "--main", "README.rdoc"]
