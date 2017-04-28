@@ -5,12 +5,10 @@ require File.join(File.dirname(__FILE__) + "/spec_helper")
 describe Fixnum do
   describe "random_vowels" do
     it "should be a method" do
-      Fixnum.instance_methods.should include("random_vowels")
       5.should respond_to(:random_vowels)
     end
 
     it "should be alias'd as random_vowel" do
-      Fixnum.instance_methods.should include("random_vowel")
       5.should respond_to(:random_vowel)
     end
 
@@ -42,12 +40,10 @@ describe Fixnum do
 
   describe "random_consonants" do
     it "should be a method" do
-      Fixnum.instance_methods.should include("random_consonants")
       5.should respond_to(:random_consonants)
     end
 
     it "should be alias'd as random_consonant" do
-      Fixnum.instance_methods.should include("random_consonant")
       5.should respond_to(:random_consonant)
     end
 
@@ -84,12 +80,10 @@ describe Fixnum do
 
   describe "random_letters" do
     it "should be a method" do
-      Fixnum.instance_methods.should include("random_letters")
       5.should respond_to(:random_letters)
     end
 
     it "should be alias'd as random_letter" do
-      Fixnum.instance_methods.should include("random_letter")
       5.should respond_to(:random_letter)
     end
 
@@ -125,12 +119,10 @@ describe Fixnum do
 
   describe "random_numbers" do
     it "should be a method" do
-      Fixnum.instance_methods.should include("random_numbers")
       5.should respond_to(:random_numbers)
     end
 
     it "should be alias'd as random_number" do
-      Fixnum.instance_methods.should include("random_number")
       5.should respond_to(:random_number)
     end
 
@@ -204,12 +196,10 @@ describe Fixnum do
 
   describe "random_characters" do
     it "should be a method" do
-      Fixnum.instance_methods.should include("random_characters")
       5.should respond_to(:random_numbers)
     end
 
     it "should be alias'd as random_character" do
-      Fixnum.instance_methods.should include("random_character")
       5.should respond_to(:random_character)
     end
 
@@ -248,12 +238,10 @@ describe Fixnum do
 
   describe "random_hex_characters" do
     it "should be a method" do
-      Fixnum.instance_methods.should include("random_hex_characters")
       5.should respond_to(:random_hex_character)
     end
 
     it "should be alias'd as random_hex_character" do
-      Fixnum.instance_methods.should include("random_hex_character")
       5.should respond_to(:random_hex_character)
     end
 

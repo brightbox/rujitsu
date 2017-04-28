@@ -4,7 +4,6 @@ require File.join(File.dirname(__FILE__) + "/spec_helper")
 
 describe Numeric, "to_cents" do
   it "should be a method" do
-    Numeric.instance_methods.should include("to_cents")
     Numeric.new.should respond_to(:to_cents)
   end
 

@@ -5,7 +5,7 @@ require File.join(File.dirname(__FILE__) + "/spec_helper")
 describe Range do
   describe "to_random_i" do
     it "should be a method" do
-      Range.instance_methods.should include("to_random_i")
+      (0..1).should respond_to(:to_random_i)
     end
 
     it "should return a random number from the range" do
@@ -25,7 +25,6 @@ describe Range do
 
   describe "random_letters" do
     it "should be a method" do
-      Range.instance_methods.should include("random_letters")
       (0..1).should respond_to(:random_letters)
     end
 
@@ -40,7 +39,6 @@ describe Range do
 
   describe "random_numbers" do
     it "should be a method" do
-      Range.instance_methods.should include("random_numbers")
       (0..1).should respond_to(:random_numbers)
     end
 
@@ -116,7 +114,6 @@ describe Range do
 
   describe "random_letters" do
     it "should be a method" do
-      Range.instance_methods.should include("random_characters")
       (0..1).should respond_to(:random_characters)
     end
 
@@ -131,7 +128,6 @@ describe Range do
 
   describe "#random_hex_characters" do
     it "should be a method" do
-      Range.instance_methods.should include("random_hex_characters")
       (0..1).should respond_to("random_hex_characters")
     end
 
