@@ -1,6 +1,8 @@
+# encoding: utf-8
+
 module Kernel
   # If output is true then echo's,
-  # else just returns the name 
+  # else just returns the name
   def _cmd output=false
     caller[0] =~ /`([^']*)'/
     output ? p($1) : $1
@@ -13,7 +15,7 @@ module ExtendObject
   def simple_methods
     self.methods.sort - Object.methods
   end
-  
+
   # Matches your search string against all
   # methods and returns array
   def grep_method match

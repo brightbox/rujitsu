@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RujitsuFixnum
   # produce a string of N random vowels
   def random_vowels opts={}
@@ -27,9 +29,9 @@ module RujitsuFixnum
     upper = opts[:to] || 9
     lower = opts[:from] || 0
     only = opts[:only] || :both
-            
+
     # And finally calculate the number
-    n = []    
+    n = []
     (self - 1).times do
       i = (lower..upper).to_a.sort_by { rand }.first
       n << i.to_s
@@ -73,7 +75,7 @@ module RujitsuFixnum
         legal_characters.delete(char)
       end
     end
-    
+
     upper_limit = legal_characters.size - 1
 
     srand # seed rand
@@ -81,7 +83,7 @@ module RujitsuFixnum
       legal_characters[rand(upper_limit)]
     end.join
   end
-  
+
   def end_number_choices opt
     case opt
     when :even

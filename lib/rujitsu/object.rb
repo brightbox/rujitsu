@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RujitsuObject
   # return true if this object is within the given container
   # if the supplied container does not respond to include? then an equality test is used instead

@@ -4,8 +4,10 @@ A ruby gem with various helper methods to smooth out your Ruby development.
 
 == Install
 
-  gem install brightbox-rujitsu --source http://gems.github.com
-  
+Add the following to your Gemfile
+
+  gem "rujitsu"
+
 == Including
 
   require "rujitsu"
@@ -16,16 +18,6 @@ For using in irb, there's a nice shortcut for you to use:
   $ irb -rubygems -rujitsu
 
 (This works because <tt>-r</tt> is the argument to require a file, and both 'ubygems.rb' and 'ujitsu.rb' exist.)
-
-=== Rails
-
-To require in rails 2.2, add the following to your <tt>environment.rb</tt> file.
-
-  config.gem "rujitsu"
-
-If you use RSpec you might want to add the following to your <tt>environments/test.rb</tt>:
-
-  config.gem "rujitsu", :lib => "rujitsu/grammar"
 
 == Documentation
 
@@ -40,11 +32,11 @@ The Fixnum class has a couple of extensions allowing you to generate random stri
   5.random_letters
   5.random_numbers
   5.random_characters
-  
+
 You can also generate a variable length string.  
 
   (3..5).random_letters
-  
+
 This generates a string of random letters whose length is 3, 4 or 5 characters.  
 
 <em>(All the above methods exist in the singular too. eg, <tt>1.random_letter</tt>)</em>
@@ -60,13 +52,13 @@ The String class has an extension that strips out URL-unfriendly characters.
 The String class has an extension that truncates it to a customisable length with a customisable suffix.
 
   "this is a string".truncate(:length => 15) # => "this is a st..."
-  
+
 === Testing for inclusion within a container
 
 As Rubyists we are all familiar with using include? to test if our variable is one of a number of values.  
 
   if ['hello', 'world'].include?(@my_value) ... 
-  
+
 However, it doesn't read correctly.  Rujitsu allows you to write the following as it reads much more like English.  
 
   if @my_value.in? ['hello', 'world'] ... 
