@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "rujitsu"
-  spec.version = "0.3.3"
+  spec.version = "0.3.4"
   spec.date = "2010-06-03"
   spec.authors = ["Brightbox Systems Ltd", "Caius Durling", "Rahoul Baruah"]
   spec.email = %q{hello@brightbox.co.uk}

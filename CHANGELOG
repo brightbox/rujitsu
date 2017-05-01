@@ -1,3 +1,7 @@
+= Version 0.3.4 (2017-05-01)
+
+Added ::start_of_this_month, ::start_of_last_month and ::start_of_next_month for Date class
+
 = Version 0.3.1 (2009-12-04)
 
 rujitsu/grammar now raises the proper rule (one of the most important updates ever)
