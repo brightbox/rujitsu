@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = %q{rujitsu}
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Various helper methods to smooth over Ruby development}
+  s.add_development_dependency = 'timecop'
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
