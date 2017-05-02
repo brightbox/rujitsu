@@ -1,7 +1,6 @@
 require 'date'
 
 module RujitsuDate
-
   def start_of_this_month
     today = self.today
     self.new(today.year, today.month)
@@ -24,7 +23,6 @@ module RujitsuDate
       self.new(today.year + 1, 1)
     end
   end
-
 end
 
 Date.send(:extend, RujitsuDate)

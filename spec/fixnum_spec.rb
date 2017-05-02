@@ -212,7 +212,6 @@ describe Fixnum do
       end
     end
 
-
     it "should exclude a character" do
       # 26^5 should be large enough to get at least one
       # instance of every character.
@@ -222,7 +221,6 @@ describe Fixnum do
       str.length.should == (26**2)
       str.should_not match(/c/)
     end
-
 
     it "should exclude characters" do
       # 26^5 should be large enough to get at least one
@@ -234,7 +232,6 @@ describe Fixnum do
       str.should_not match(/cdf/)
     end
   end
-
 
   describe "random_hex_characters" do
     it "should be a method" do

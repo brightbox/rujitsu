@@ -2,7 +2,6 @@ require File.join(File.dirname(__FILE__) + "/spec_helper")
 require 'timecop'
 
 describe Date do
-
   describe 'start_of_this_month' do
     it 'should return correct month number' do
       Timecop.freeze Time.local(2017, 5, 15) do

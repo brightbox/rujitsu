@@ -140,7 +140,6 @@ describe Range do
     end
   end
 
-
   def setup_range
     @range = (3..5)
     @range.should_receive(:to_random_i).and_return(4)
