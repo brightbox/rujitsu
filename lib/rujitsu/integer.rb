@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module RujitsuFixnum
+module IntegerFixnum
   # produce a string of N random vowels
   def random_vowels opts={}
     generate_random_string_using VOWELS, opts
@@ -96,4 +96,4 @@ module RujitsuFixnum
   end
 end
 
-Fixnum.send(:include, RujitsuFixnum)
+Integer.send(:include, RujitsuFixnum)
