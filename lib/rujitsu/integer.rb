@@ -96,4 +96,4 @@ module RujitsuInteger
   end
 end
 
-Integer.send(:include, RujitsuFixnum)
+Integer.send(:include, RujitsuInteger)
