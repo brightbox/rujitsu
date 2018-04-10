@@ -13,12 +13,12 @@ describe Range do
 
       # First check with an absolute
       result = @range.to_random_i
-      result.should be_a_kind_of(Fixnum)
+      result.should be_a_kind_of(Integer)
       result.should == 4
 
       # And then one that is random
       res = (3..5).to_random_i
-      res.should be_a_kind_of(Fixnum)
+      res.should be_a_kind_of(Integer)
       [3,4,5].should include(res)
     end
   end

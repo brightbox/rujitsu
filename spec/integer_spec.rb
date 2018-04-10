@@ -2,7 +2,7 @@
 
 require File.join(File.dirname(__FILE__) + "/spec_helper")
 
-describe Fixnum do
+describe Integer do
   describe "random_vowels" do
     it "should be a method" do
       5.should respond_to(:random_vowels)
