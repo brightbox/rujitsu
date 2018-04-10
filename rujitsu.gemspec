@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "rujitsu"
-  spec.version = "0.4.0"
+  spec.version = "0.5.0"
   spec.date = "2010-06-03"
   spec.authors = ["Brightbox Systems Ltd", "Caius Durling", "Rahoul Baruah"]
   spec.email = %q{hello@brightbox.co.uk}
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage = %q{http://github.com/brightbox/rujitsu}
   spec.license = "MIT"
 
-  spec.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/rujitsu.rb", "lib/rujitsu/all.rb", "lib/rujitsu/fixnum.rb", "lib/rujitsu/grammar.rb", "lib/rujitsu/inspect.rb", "lib/rujitsu/numeric.rb", "lib/rujitsu/object.rb", "lib/rujitsu/range.rb", "lib/rujitsu/string.rb", "lib/ujitsu.rb"]
+  spec.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/rujitsu.rb", "lib/rujitsu/all.rb", "lib/rujitsu/integer.rb", "lib/rujitsu/grammar.rb", "lib/rujitsu/inspect.rb", "lib/rujitsu/numeric.rb", "lib/rujitsu/object.rb", "lib/rujitsu/range.rb", "lib/rujitsu/string.rb", "lib/ujitsu.rb"]
   spec.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rujitsu", "--main", "README.rdoc"]
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

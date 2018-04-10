@@ -1,3 +1,7 @@
+= Version 0.5.0 (2018-04-10)
+
+Rename `RujitsuFixnum` to `RujitsuInteger` (via @worldisaduck)
+
 = Version 0.4.0 (2017-05-02)
 
 Added ::start_of_this_month, ::start_of_last_month and ::start_of_next_month for Date class (via @worldisaduck)
